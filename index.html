@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VFM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Vision Foundation Model Enables Generalizable Object Pose Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ck-kai.github.io/" target="_blank">Kai Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="" target="_blank">Yiyao Ma</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xingyu-lin.github.io" target="_blank">Xingyu Lin</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://stepjam.github.io/" target="_blank">Stephen James</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=HVofSgQAAAAJ&hl=zh-CN" target="_blank">Jianshu Zhou</a><sup>1</sup>,
+            </span><br>
+            <span class="author-block">
+              <a href="http://ri.cuhk.edu.hk/yhliu" target="_blank">Yun-Hui Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~pabbeel/" target="_blank">Pieter Abbeel</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cse.cuhk.edu.hk/~qdou/" target="_blank">Qi Dou</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup><a href = "https://www.cuhk.edu.hk/english/index.html" target="_blank"> The Chinese University of Hong Kong </a>,</span>
+            <span class="author-block"><sup>2</sup><a href = "https://www.berkeley.edu/" target="_blank"> University of California, Berkeley </a> ,</span>
+            <span class="author-block"><sup>3</sup><a href = "https://careers.dyson.com/en-gb/" target="_blank"> Dyson Robot Learning Lab </a></span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero">
+  <div class="container is-max-desktop"> -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-12 has-text-left">
+        <p>
+          Below, we show the track-guided manipulation policy. After we pre-train a track prediction model on video data, we can train policies by learning from limited human demonstration (e.g. 10 demonstrations per task). During policy learning, we sample a fixed set of 64 points across the thrid-person camera view and the wrist view. You can see the predicted tracks indicated by the colored curves. The curves indicate the locations (in the camera frame) that the points should go to in future time steps.
+          With dense supervision from the predicted tracks, our trained policies are able to perform long-horizon tasks, reasoning on objects, spatial locations and language instructions.
+        </p>
+        <br>
+        <p>
+          Use the tabs and the dropdown menu to select the task suite in the benchmark the language instruction.
+        </p>
+      </div>
+    </div> -->
+    <!-- <div class="tabs is-toggle is-fullwidth" id="anyTaskTabs">
+      <ul>
+        <li class="tablinks" id="clickDefaultAny" onclick="switchTabAny(event, 'bag')"><a><b>Place Bag</b></a></li>
+        <li class="tablinks" onclick="switchTabAny(event, 'long')"><a><b>LIBERO-Long</b></a></li>
+        <li class="tablinks" onclick="switchTabAny(event, 'spatial')"><a><b>LIBERO-Spatial</b></a></li>
+        <li class="tablinks" onclick="switchTabAny(event, 'object')"><a><b>LIBERO-Object</b></a></li>
+        <li class="tablinks" onclick="switchTabAny(event, 'goal')"><a><b>LIBERO-Goal</b></a></li>
+      </ul>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <div class="field">
+          <div class="control">
+            <div class="select">
+              <select id="dropdown2Any" onchange="changeImageAny()">
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-10">
+        <video id="displayed-image-any" autoplay muted loop playsinline width="100%">
+          <source src="./static/videos/anypoint/libero-long/env_0_overlay.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-left">
+      <div class="column">
+        <h2 class="subtitle has-text-centered">
+          <strong>ATM</strong> learns point track proposals for arbitrary 2D points across arbitrary views from large actionless video datasets, enabling sample-efficient, multi-task policy learning, and cross-embodiment transfer. We visualize the predicted tracks (beginning from the blue points) of a set of points across the robot's base and wrist views.
+        </h2>
+      </div>
+    </div> -->
+    <!-- <div class="columns is-centered has-text-left">
+      <div class="column">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/compressed_pull_720_2.mp4"
+                type="video/mp4"></video>
+        <p class="has-text-centered">
+          <strong>ATM</strong> learns point track proposals for arbitrary 2D points from actionless video datasets, enabling sample-efficient policy learning and cross-embodiment transfer. We visualize the predicted tracks, beginning from the set of blue points.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+</section> -->
+
+<section class="hero is-light">
+  <br>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Object pose estimation plays a crucial role in robotic manipulation, however, its practical applicability still suffers from limited generalizability. This paper addresses the challenge of generalizable object pose estimation, particularly focusing on category-level object pose estimation for unseen object categories. Current methods either require impractical instance-level training or are confined to predefined categories, limiting their applicability. We propose VFM-6D, a novel framework that explores harnessing existing vision and language models, to elaborate object pose estimation into two stages: category-level object viewpoint estimation and object coordinate map estimation. Based on the two-stage framework, we introduce a 2D-to-3D feature lifting module and a shape-matching module, both of which leverage pre-trained vision foundation models to improve object representation and matching accuracy. VFM-6D is trained on cost-effective synthetic data and exhibits superior generalization capabilities. It can be applied to both instance-level unseen object pose estimation and category-level object pose estimation for novel categories. Evaluations on benchmark datasets demonstrate the effectiveness and versatility of VFM-6D in various real-world scenarios.
+          </p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-left">
+      <div class="column">
+        <h2 class="title is-4">Method Overview</h2>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-12">
+        <p>
+          Prior work in policy learning from video reasons about images, which is computationally expensive and prone to hallucination. We take inspiration from particle-based approaches and leverage a point representation. Compared to image generation, points naturally capture inductive biases such as object permanence, and decouples relevant motion of objects from lighting and texture.
+          ATM first pre-trains a language-conditioned track prediction model on video data to predict future trajectories of arbitrary points within a video frame. Using these learned track proposals, we can then train policies by learning from limited human demonstration (e.g. 10 demonstrations per task), using a simple fixed set of 64 points across the third-person camera view and the wrist view.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-12">
+        <img src="./static/images/method.png" alt="teaser" class="teaser-image"><br>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-12">
+        <p>
+
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-left">
+      <div class="column">
+        <h2 class="title is-4">Results</h2>
+      </div>
+    </div>
+    <!-- <div class="columns is-centered has-text-justified">
+      <div class="column is-12">
+        <p>
+          We evaluate our method on a challenging simulation benchmark (LIBERO) comprising 130 language-conditioned manipulation tasks, and on 5 tasks in a real-world UR5 Kitchen environment. Our experiments demonstrate that trajectory-guided policies significantly surpass various strong baselines in video pre-training, achieving an average success rate of 63% compared to the highest success rate of 37% by previous methods, marking an improvement of over 80%. ATM's performance is also comparable to BC with 5x more training demonstrations (the BC-Full-Trainset indicated by the black dashed line).
+        </p>
+      </div>
+    </div> -->
+    <!-- <div class="columns is-centered has-text-justified">
+      <div class="column is-8">
+        <img src="./static/images/main_results.png" alt="teaser" class="teaser-image"><br>
+      </div>
+    </div> -->
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-12">
+        <p>
+          We evaluate our method on a challenging simulation benchmark (LIBERO) comprised of 130 language-conditioned manipulation tasks, and on 5 tasks in a real-world UR5 Kitchen environment. Our experiments demonstrate that trajectory-guided policies significantly surpass various strong baselines in video pre-training. With dense supervision from the predicted tracks, our trained policies are able to perform long-horizon tasks, and reason about objects, spatial locations, and language instructions.
+          <!-- in both a large scale simulated benchmark (LIBERO), and a real-world kitchen environment.  -->
+          We visualize policy rollouts on all 130 of the LIBERO tasks below:
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-10">
+        <video autoplay muted loop playsinline>
+          <source src="./static/videos/compressed_all_tasks_1080.mp4"
+                  type="video/mp4">
+      </div>
+    </div>
+    <br>
+    <!-- <div class="columns is-centered has-text-justified">
+      <div class="column is-12 low-marg">
+        <p>
+          <strong>Video:</strong> ATM policies performing 130 language-conditioned manipulation tasks in simulation. Performance is comparable to BC with 5x more training demonstrations.
+        </p>
+        <br>
+      </div>
+    </div> -->
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title is-5">Policy Rollout Visualization</h2>
+      </div>
+      <div class="column is-12 has-text-left">
+        <p>
+          Use the tabs and the dropdown menu to select the task suite in the benchmark the language instruction. The colored curves indicate the locations (in the camera frame) that the points should go to in future time steps.
+          For simulation tasks, the green border indicates successful task completion.
+        </p>
+      </div>
+    </div>
+    <div class="tabs is-toggle is-fullwidth" id="policyTaskTabs">
+      <ul>
+        <li class="tablinks" id="clickDefault" onclick="switchTab(event, 'real')"><a><b>Real-Kitchen</b></a></li>
+        <li class="tablinks" onclick="switchTab(event, 'long')"><a><b>LIBERO-Long</b></a></li>
+        <li class="tablinks" onclick="switchTab(event, 'spatial')"><a><b>LIBERO-Spatial</b></a></li>
+        <li class="tablinks" onclick="switchTab(event, 'object')"><a><b>LIBERO-Object</b></a></li>
+        <li class="tablinks" onclick="switchTab(event, 'goal')"><a><b>LIBERO-Goal</b></a></li>
+      </ul>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <div class="field">
+          <div class="control">
+            <div class="select">
+              <select id="dropdown2" onchange="changeImage()">
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-10 full">
+        <video id="displayed-image" class="lib-video" autoplay muted loop playsinline>
+          <source src="./static/videos/env_0.mp4"
+                  type="video/mp4">
+        </video>
+        <!-- <img id="displayed-image" src="" alt="Selected Image"> -->
+      </div>
+    </div>
+    <br>
+    <div class="columns is-centered is-multiline">
+      <div class="column is-12">
+        <h2 class="title is-5">Tracks Enable Cross-embodiment Learning</h2>
+      </div>
+      <div class="column is-12 has-text-left">
+        <p>
+          ATM's track transformer can leverage videos of different embodiments accomplishing the same task to capture the relevant motion. In the below examples, we train the track transformer on a large dataset of actionless videos from the first embodiment, and 10 demonstrations from the second embodiment. We then perform policy learning on 10 demonstrations. By incorporating the cross-embodiment videos, ATM generates higher fidelity tracks, and ATM's policy performance greatly increases.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered is-multiline">
+      <div class="column is-12 low-marg">
+        <p>
+          <strong>Fold the cloth and pull it to the right</strong>: tracks model changes in deformation.
+        </p>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pt item-container">
+          <p><strong>Video Pre-training</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/cloth/cloth_human.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>100 human</strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/cloth/cloth_robot.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>10 UR5</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pl item-container">
+          <p><strong>ATM Policy Learning</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/cloth/cloth_atm.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>UR5 only: <span style="color:#900000">0%</span></strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/cloth/cloth_atm_h.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>Human+UR5: <span style="color:green">63%</span></strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-12 low-marg">
+        <p>
+          <strong>Put the tomato into the pan and close the cabinet door</strong>: tracks effectively guide long-horizon behaviors.
+        </p>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pt item-container">
+          <p><strong>Video Pre-training</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/kitchen/kitchen_human.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>100 human</strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/kitchen/kitchen_robot.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>10 UR5</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pl item-container">
+          <p><strong>ATM Policy Learning</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/kitchen/kitchen_atm.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>UR5 only: <span style="color:#900000">0%</span></strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/kitchen/kitchen_atm_h.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>Human+UR5: <span style="color:green">63%</span></strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-12 low-marg">
+        <p>
+          <strong>Use the broom to sweep the toys into the dustpan and put it in front of the dustpan</strong>: tracks enable reasoning about tools.
+        </p>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pt item-container">
+          <p><strong>Video Pre-training</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/tool/tool_human.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>100 human</strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/tool/tool_robot.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>10 UR5</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pl item-container">
+          <p><strong>ATM Policy Learning</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/tool/tool_atm.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>UR5 only: <span style="color:#900000">13%</span></strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/tool/tool_atm_h.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>Human+UR5: <span style="color:green">60%</span></strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-12 low-marg">
+        <p>
+          <strong>Pick up the can and place in the bin</strong>: tracks transfer between robots.
+        </p>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pt item-container">
+          <p><strong>Video Pre-training</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/ur/franka_pred_crop_vert.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>160 Franka</strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/ur/ur_pred_crop_vert.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>10 UR5</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-5 low-marg">
+        <div class="full pl item-container">
+          <p><strong>ATM Policy Learning</strong></p>
+          <div class="item-container">
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/ur/atm_ur_crop_vert.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>UR5 only: <span style="color:#900000">47%</span></strong></p>
+            </div>
+            <div class="half">
+              <video class="x-vid" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/xemb/ur/atm_ft_crop_vert.mp4"
+                type="video/mp4">
+              </video>
+              <p><strong>Franka+UR5: <span style="color:green">80%</span></strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="columns is-centered is-multiline">
+      <div class="column is-12">
+        <h2 class="title is-5">Which is better for video pre-training? Generative Video Model vs. Trajectory Model </h2>
+      </div>
+      <div class="column is-12 has-text-left">
+        <p>
+          To better understand the advantages of ATM's track subgoals, we compare them qualitatively to image subgoals generated by <b>UniPi (left)</b>. To decouple the advantages of open-loop and closed-loop video generation, we additionally instantiate <b>UniPi-Replan (right)</b>, which proposes new image subgoals every 8 actions.
+        </p>
+        <br>
+        <p>
+          Qualitatively, UniPi suffers from motor control failure caused by a lack of fine-grained details in image subgoals. UniPi-Replan additionally experiences failures in image generation, generating noisy images when out of distribution, or generating images that correspond to a different task.
+        </p>
+      </div>
+    </div>
+    <div class="container affordance-viz">
+      <div class="carousel">
+        <div class="item">
+          <div class="item-container">
+            <p>
+              <strong>Pick up the alphabet soup and place it in the basket</strong>: UniPi-Replan fails to pick up the soup. It is difficult to determine whether the generated image subgoals reach for the soup can in the back, or the carton in the front.
+            </p>
+          </div>
+          <div class="item-container">
+            <video class="temp" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//ATM/obj-0-trimmed.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp/unipi/obj-0-succ.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi-replan/obj-0-generation.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item-container">
+            <div class="comp-item-label temp">
+              <p><strong>ATM</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi-Replan</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-container">
+            <p>
+              <strong>Pick up the bbq sauce and place it in the basket</strong>: UniPi fails to pick up the bbq sauce, as image subgoals lack finer details relevant to motor control.
+            </p>
+          </div>
+          <div class="item-container">
+            <video class="temp" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//ATM/obj-1-trimmed.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi/obj-1-motor.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi-replan/obj-1-succ.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item-container">
+            <div class="comp-item-label temp">
+              <p><strong>ATM</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi-Replan</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-container">
+            <p>
+              <strong>Open the middle drawer of the cabinet</strong>: UniPi-Replan's diffusion model generates subgoals corresponding to a different task, indicating the increased difficulty of closed-loop video generation.
+            </p>
+          </div>
+          <div class="item-container">
+            <video class="temp" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//ATM/goal-0-trimmed.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi/goal-0-succ.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi-replan/goal-0-wrong-task.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item-container">
+            <div class="comp-item-label temp">
+              <p><strong>ATM</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi-Replan</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-container">
+            <p>
+              <strong>Open the top drawer of the cabinet</strong>: Both UniPi and UniPi-Replan experience motor control failure, as it is difficult to tell when to close the gripper from noisy image subgoals.
+            </p>
+          </div>
+          <div class="item-container">
+            <video class="temp" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//ATM/goal-1-trimmed.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi/goal-1-motor.mp4"
+                      type="video/mp4">
+            </video>
+            <video class="comp-vid" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/new_comp//unipi-replan/goal-1-motor.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item-container">
+            <div class="comp-item-label temp">
+              <p><strong>ATM</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi</strong></p>
+            </div>
+            <div class="comp-item-label">
+              <p><strong>UniPi-Replan</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>@misc{wen2023anypoint,
+      title={Any-point Trajectory Modeling for Policy Learning},
+      author={Chuan Wen and Xingyu Lin and John So and Kai Chen and Qi Dou and Yang Gao and Pieter Abbeel},
+      year={2023},
+      eprint={2401.00025},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="custom_footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
