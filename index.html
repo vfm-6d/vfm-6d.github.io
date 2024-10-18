@@ -91,69 +91,19 @@
   </div>
 </section>
 
-<!-- <section class="hero">
-  <div class="container is-max-desktop"> -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-12 has-text-left">
-        <p>
-          Below, we show the track-guided manipulation policy. After we pre-train a track prediction model on video data, we can train policies by learning from limited human demonstration (e.g. 10 demonstrations per task). During policy learning, we sample a fixed set of 64 points across the thrid-person camera view and the wrist view. You can see the predicted tracks indicated by the colored curves. The curves indicate the locations (in the camera frame) that the points should go to in future time steps.
-          With dense supervision from the predicted tracks, our trained policies are able to perform long-horizon tasks, reasoning on objects, spatial locations and language instructions.
-        </p>
-        <br>
-        <p>
-          Use the tabs and the dropdown menu to select the task suite in the benchmark the language instruction.
-        </p>
-      </div>
-    </div> -->
-    <!-- <div class="tabs is-toggle is-fullwidth" id="anyTaskTabs">
-      <ul>
-        <li class="tablinks" id="clickDefaultAny" onclick="switchTabAny(event, 'bag')"><a><b>Place Bag</b></a></li>
-        <li class="tablinks" onclick="switchTabAny(event, 'long')"><a><b>LIBERO-Long</b></a></li>
-        <li class="tablinks" onclick="switchTabAny(event, 'spatial')"><a><b>LIBERO-Spatial</b></a></li>
-        <li class="tablinks" onclick="switchTabAny(event, 'object')"><a><b>LIBERO-Object</b></a></li>
-        <li class="tablinks" onclick="switchTabAny(event, 'goal')"><a><b>LIBERO-Goal</b></a></li>
-      </ul>
-    </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-12">
-        <div class="field">
-          <div class="control">
-            <div class="select">
-              <select id="dropdown2Any" onchange="changeImageAny()">
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="columns is-centered has-text-justified">
-      <div class="column is-10">
-        <video id="displayed-image-any" autoplay muted loop playsinline width="100%">
-          <source src="./static/videos/anypoint/libero-long/env_0_overlay.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
+<section class="hero">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-left">
       <div class="column">
-        <h2 class="subtitle has-text-centered">
-          <strong>ATM</strong> learns point track proposals for arbitrary 2D points across arbitrary views from large actionless video datasets, enabling sample-efficient, multi-task policy learning, and cross-embodiment transfer. We visualize the predicted tracks (beginning from the blue points) of a set of points across the robot's base and wrist views.
-        </h2>
-      </div>
-    </div> -->
-    <!-- <div class="columns is-centered has-text-left">
-      <div class="column">
-        <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/compressed_pull_720_2.mp4"
-                type="video/mp4"></video>
+        <img src="./static/images/teaser.pdf" alt="teaser" class="teaser-image"><br>
         <p class="has-text-centered">
-          <strong>ATM</strong> learns point track proposals for arbitrary 2D points from actionless video datasets, enabling sample-efficient policy learning and cross-embodiment transfer. We visualize the predicted tracks, beginning from the set of blue points.
+          VFM-6D uses cost-effective synthetic data to adapt robust object representations from pre-trained vision foundation models to the task of object pose estimation. VFM-6D supports both instance-level unseen object pose estimation and category-level pose estimation for novel object categories.
         </p>
       </div>
     </div>
   </div>
   <br>
-</section> -->
+</section>
 
 <section class="hero is-light">
   <br>
