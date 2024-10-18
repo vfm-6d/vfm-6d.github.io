@@ -131,14 +131,16 @@
     <div class="columns is-centered has-text-justified">
       <div class="column is-12">
         <p>
-          Prior work in policy learning from video reasons about images, which is computationally expensive and prone to hallucination. We take inspiration from particle-based approaches and leverage a point representation. Compared to image generation, points naturally capture inductive biases such as object permanence, and decouples relevant motion of objects from lighting and texture.
-          ATM first pre-trains a language-conditioned track prediction model on video data to predict future trajectories of arbitrary points within a video frame. Using these learned track proposals, we can then train policies by learning from limited human demonstration (e.g. 10 demonstrations per task), using a simple fixed set of 64 points across the third-person camera view and the wrist view.
+          VFM-6D elaborates object pose estimation into two stages: foundation model based object viewpoint estimation and reference-based object coordinate map estimation.
+          First, a 2D-to-3D foundation feature lifting module is developed to adapt 2D pre-trained features to 3D view-aware object representations for precise query-reference matching and object viewpoint estimation.
+          Building on the estimated object viewpoint and the matched reference image, we further introduce a foundation-feature-based object 3D shape representation module.          
+          It enhances robust shape matching and coordinate map estimation across a variety of objects for generalizable object pose estimation.
         </p>
       </div>
     </div>
     <div class="columns is-centered has-text-justified">
       <div class="column is-12">
-        <img src="./static/images/method.png" alt="teaser" class="teaser-image"><br>
+        <img src="./static/images/framework.png" alt="teaser" class="teaser-image"><br>
       </div>
     </div>
     <div class="columns is-centered has-text-justified">
