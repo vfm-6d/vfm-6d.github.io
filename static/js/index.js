@@ -153,65 +153,79 @@ function switchTab(evt, selectedTab) {
   if (selectedTab === 'wild6d') {
     addOptionsToDropdown([
       // { value: 'real/env_0_combined.mp4', display: 'squeeze the mustard on the carrot' },
-      { value: 'framework.png', display: 'squeeze the mustard on the carrot' },
-      { value: 'teaser.png', display: "put the carrot into the basket" },
-      { value: 'real/env_2_combined.mp4', display: "pour the cup into the bin" },
-      { value: 'real/env_3_combined.mp4', display: "put the spoon into the bowl" },
-      { value: 'real/env_4_combined.mp4', display: "put the tomato into the bowl" },
+      { value: 'framework.png', display: "laptop" },
+      { value: 'teaser.png', display: "camera" },
+      { value: 'real/env_2_combined.mp4', display: "mug" },
+      { value: 'real/env_3_combined.mp4', display: "bottle" },
+      { value: 'real/env_4_combined.mp4', display: "bowl" },
     ], dropdown2);
   } else if (selectedTab === 'co3d') {
     addOptionsToDropdown([
-      { value: 'framework.png', display: 'pick up the black bowl between the plate and the ramekin and place it on the plate' },
-      { value: 'teaser.png', display: "pick up the black bowl from table center and place it on the plate" },
-      { value: 'libero-spatial/env_2.mp4', display: "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate" },
-      { value: 'libero-spatial/env_3.mp4', display: "pick up the black bowl next to the cookie box and place it on the plate" },
-      { value: 'libero-spatial/env_4.mp4', display: "pick up the black bowl next to the plate and place it on the plate" },
-      { value: 'libero-spatial/env_5.mp4', display: "pick up the black bowl next to the ramekin and place it on the plate" },
-      { value: 'libero-spatial/env_6.mp4', display: "pick up the black bowl on the cookie box and place it on the plate" },
-      { value: 'libero-spatial/env_7.mp4', display: "pick up the black bowl on the ramekin and place it on the plate" },
-      { value: 'libero-spatial/env_8.mp4', display: "pick up the black bowl on the stove and place it on the plate" },
-      { value: 'libero-spatial/env_9.mp4', display: "pick up the black bowl on the wooden cabinet and place it on the plate" }
+      { value: 'framework.png', display: 'motorcycle' },
+      { value: 'teaser.png', display: "backpack" },
+      { value: 'libero-spatial/env_2.mp4', display: "bicycle" },
+      { value: 'libero-spatial/env_3.mp4', display: "teddybear" },
+      { value: 'libero-spatial/env_4.mp4', display: "book" },
+      { value: 'libero-spatial/env_5.mp4', display: "car" },
+      { value: 'libero-spatial/env_6.mp4', display: "chair" },
+      { value: 'libero-spatial/env_7.mp4', display: "handbag" },
+      { value: 'libero-spatial/env_8.mp4', display: "hydrant" },
+      { value: 'libero-spatial/env_9.mp4', display: "keyboard" },
+      { value: 'libero-spatial/env_9.mp4', display: "mouse" },
+      { value: 'libero-spatial/env_9.mp4', display: "toaster" },
+      { value: 'libero-spatial/env_9.mp4', display: "hairdryer" },
+      { value: 'libero-spatial/env_9.mp4', display: "laptop" },
+      { value: 'libero-spatial/env_9.mp4', display: "remote" },
+      { value: 'libero-spatial/env_9.mp4', display: "toilet" },
+      { value: 'libero-spatial/env_9.mp4', display: "toybus" },
+      { value: 'libero-spatial/env_9.mp4', display: "toyplane" },
+      { value: 'libero-spatial/env_9.mp4', display: "toytrain" },
+      { value: 'libero-spatial/env_9.mp4', display: "toytruck" }
     ], dropdown2);
   } else if (selectedTab === 'linemod') {
     addOptionsToDropdown([
-      { value: 'framework.png', display: 'pick up the alphabet soup and place it in the basket' },
-      { value: 'teaser.png', display: 'pick up the bbq sauce and place it in the basket' },
-      { value: 'libero-object/env_2.mp4', display: 'pick up the butter and place it in the basket' },
-      { value: 'libero-object/env_3.mp4', display: 'pick up the chocolate pudding and place it in the basket' },
-      { value: 'libero-object/env_4.mp4', display: 'pick up the cream cheese and place it in the basket' },
-      { value: 'libero-object/env_5.mp4', display: 'pick up the ketchup and place it in the basket' },
-      { value: 'libero-object/env_6.mp4', display: 'pick up the milk and place it in the basket' },
-      { value: 'libero-object/env_7.mp4', display: 'pick up the orange juice and place it in the basket' },
-      { value: 'libero-object/env_8.mp4', display: 'pick up the salad dressing and place it in the basket' },
-      { value: 'libero-object/env_9.mp4', display: 'pick up the tomato sauce and place it in the basket' },
+      { value: 'framework.png', display: 'ape' },
+      { value: 'teaser.png', display: 'bench.' },
+      { value: 'libero-object/env_2.mp4', display: 'camera' },
+      { value: 'libero-object/env_3.mp4', display: 'can' },
+      { value: 'libero-object/env_4.mp4', display: 'cat' },
+      { value: 'libero-object/env_5.mp4', display: 'driller' },
+      { value: 'libero-object/env_6.mp4', display: 'duck' },
+      { value: 'libero-object/env_7.mp4', display: 'eggbox' },
+      { value: 'libero-object/env_8.mp4', display: 'glue' },
+      { value: 'libero-object/env_9.mp4', display: 'holep.' },
+      { value: 'libero-object/env_9.mp4', display: 'iron' },
+      { value: 'libero-object/env_9.mp4', display: 'lamp' },
+      { value: 'libero-object/env_9.mp4', display: 'phone' }
     ], dropdown2);
-  } else if (selectedTab === 'goal') {
-    addOptionsToDropdown([
-      { value: 'libero-goal/env_0.mp4', display: 'open the middle drawer of the cabinet' },
-      { value: 'libero-goal/env_1.mp4', display: 'open the top drawer and put the bowl inside' },
-      { value: 'libero-goal/env_2.mp4', display: 'push the plate to the front of the stove' },
-      { value: 'libero-goal/env_3.mp4', display: 'put the bowl on the plate' },
-      { value: 'libero-goal/env_4.mp4', display: 'put the bowl on the stove' },
-      { value: 'libero-goal/env_5.mp4', display: 'put the bowl on top of the cabinet' },
-      { value: 'libero-goal/env_6.mp4', display: 'put the cream cheese in the bowl' },
-      { value: 'libero-goal/env_7.mp4', display: 'put the wine bottle on the rack' },
-      { value: 'libero-goal/env_8.mp4', display: 'put the wine bottle on top of the cabinet' },
-      { value: 'libero-goal/env_9.mp4', display: 'turn on the stove' }
-    ], dropdown2)
-  } else if (selectedTab === 'long') {
-    addOptionsToDropdown([
-      { value: 'libero-long/env_1.mp4', display: 'put the black bowl in the bottom drawer of the cabinet and close it' },
-      { value: 'libero-long/env_0.mp4', display: 'turn on the stove and put the moka pot on it' },
-      { value: 'libero-long/env_2.mp4', display: 'put the yellow and white mug in the microwave and close it' },
-      { value: 'libero-long/env_3.mp4', display: 'put both moka pots on the stove' },
-      { value: 'libero-long/env_4.mp4', display: 'put both the alphabet soup and the cream cheese box in the basket' },
-      { value: 'libero-long/env_5.mp4', display: 'put both the alphabet soup and the tomato sauce in the basket' },
-      { value: 'libero-long/env_6.mp4', display: 'put both the cream cheese box and the butter in the basket' },
-      { value: 'libero-long/env_7.mp4', display: 'put the white mug on the left plate and put the yellow and white mug on the right plate' },
-      { value: 'libero-long/env_8.mp4', display: 'put the white mug on the plate and put the chocolate pudding to the right of the plate' },
-      { value: 'libero-long/env_9.mp4', display: 'pick up the book and place it in the back compartment of the caddy' }
-    ], dropdown2)
-  }
+  } 
+  // else if (selectedTab === 'goal') {
+  //   addOptionsToDropdown([
+  //     { value: 'libero-goal/env_0.mp4', display: 'open the middle drawer of the cabinet' },
+  //     { value: 'libero-goal/env_1.mp4', display: 'open the top drawer and put the bowl inside' },
+  //     { value: 'libero-goal/env_2.mp4', display: 'push the plate to the front of the stove' },
+  //     { value: 'libero-goal/env_3.mp4', display: 'put the bowl on the plate' },
+  //     { value: 'libero-goal/env_4.mp4', display: 'put the bowl on the stove' },
+  //     { value: 'libero-goal/env_5.mp4', display: 'put the bowl on top of the cabinet' },
+  //     { value: 'libero-goal/env_6.mp4', display: 'put the cream cheese in the bowl' },
+  //     { value: 'libero-goal/env_7.mp4', display: 'put the wine bottle on the rack' },
+  //     { value: 'libero-goal/env_8.mp4', display: 'put the wine bottle on top of the cabinet' },
+  //     { value: 'libero-goal/env_9.mp4', display: 'turn on the stove' }
+  //   ], dropdown2)
+  // } else if (selectedTab === 'long') {
+  //   addOptionsToDropdown([
+  //     { value: 'libero-long/env_1.mp4', display: 'put the black bowl in the bottom drawer of the cabinet and close it' },
+  //     { value: 'libero-long/env_0.mp4', display: 'turn on the stove and put the moka pot on it' },
+  //     { value: 'libero-long/env_2.mp4', display: 'put the yellow and white mug in the microwave and close it' },
+  //     { value: 'libero-long/env_3.mp4', display: 'put both moka pots on the stove' },
+  //     { value: 'libero-long/env_4.mp4', display: 'put both the alphabet soup and the cream cheese box in the basket' },
+  //     { value: 'libero-long/env_5.mp4', display: 'put both the alphabet soup and the tomato sauce in the basket' },
+  //     { value: 'libero-long/env_6.mp4', display: 'put both the cream cheese box and the butter in the basket' },
+  //     { value: 'libero-long/env_7.mp4', display: 'put the white mug on the left plate and put the yellow and white mug on the right plate' },
+  //     { value: 'libero-long/env_8.mp4', display: 'put the white mug on the plate and put the chocolate pudding to the right of the plate' },
+  //     { value: 'libero-long/env_9.mp4', display: 'pick up the book and place it in the back compartment of the caddy' }
+  //   ], dropdown2)
+  // }
   // select the first option in dropdown2
   dropdown2.selectedIndex = 0;
   changeImage();
