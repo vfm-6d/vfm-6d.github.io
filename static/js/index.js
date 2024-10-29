@@ -155,8 +155,8 @@ function switchTab(evt, selectedTab) {
       { value: 'wild6d-laptop.png', display: "laptop" },
       { value: 'wild6d-camera.png', display: "camera" },
       { value: 'wild6d-mug.png', display: "mug" },
-      { value: 'real/env_3_combined.mp4', display: "bottle" },
-      { value: 'real/env_4_combined.mp4', display: "bowl" },
+      { value: 'wild6d-bottle.png', display: "bottle" },
+      { value: 'wild6d-bowl.png', display: "bowl" },
     ], dropdown2);
   } else if (selectedTab === 'co3d') {
     addOptionsToDropdown([
