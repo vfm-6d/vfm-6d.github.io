@@ -153,16 +153,16 @@ function switchTab(evt, selectedTab) {
   if (selectedTab === 'wild6d') {
     addOptionsToDropdown([
       // { value: 'real/env_0_combined.mp4', display: 'squeeze the mustard on the carrot' },
-      { value: 'method.png', display: 'squeeze the mustard on the carrot' },
-      { value: 'track_vis.png', display: "put the carrot into the basket" },
+      { value: 'framework.png', display: 'squeeze the mustard on the carrot' },
+      { value: 'teaser.png', display: "put the carrot into the basket" },
       { value: 'real/env_2_combined.mp4', display: "pour the cup into the bin" },
       { value: 'real/env_3_combined.mp4', display: "put the spoon into the bowl" },
       { value: 'real/env_4_combined.mp4', display: "put the tomato into the bowl" },
     ], dropdown2);
   } else if (selectedTab === 'co3d') {
     addOptionsToDropdown([
-      { value: 'libero-spatial/env_0.mp4', display: 'pick up the black bowl between the plate and the ramekin and place it on the plate' },
-      { value: 'libero-spatial/env_1.mp4', display: "pick up the black bowl from table center and place it on the plate" },
+      { value: 'framework.png', display: 'pick up the black bowl between the plate and the ramekin and place it on the plate' },
+      { value: 'teaser.png', display: "pick up the black bowl from table center and place it on the plate" },
       { value: 'libero-spatial/env_2.mp4', display: "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate" },
       { value: 'libero-spatial/env_3.mp4', display: "pick up the black bowl next to the cookie box and place it on the plate" },
       { value: 'libero-spatial/env_4.mp4', display: "pick up the black bowl next to the plate and place it on the plate" },
@@ -174,8 +174,8 @@ function switchTab(evt, selectedTab) {
     ], dropdown2);
   } else if (selectedTab === 'linemod') {
     addOptionsToDropdown([
-      { value: 'libero-object/env_0.mp4', display: 'pick up the alphabet soup and place it in the basket' },
-      { value: 'libero-object/env_1.mp4', display: 'pick up the bbq sauce and place it in the basket' },
+      { value: 'framework.png', display: 'pick up the alphabet soup and place it in the basket' },
+      { value: 'teaser.png', display: 'pick up the bbq sauce and place it in the basket' },
       { value: 'libero-object/env_2.mp4', display: 'pick up the butter and place it in the basket' },
       { value: 'libero-object/env_3.mp4', display: 'pick up the chocolate pudding and place it in the basket' },
       { value: 'libero-object/env_4.mp4', display: 'pick up the cream cheese and place it in the basket' },
@@ -237,7 +237,7 @@ function changeImage() {
   if (dropdown.value) {
     // Construct the image filepath based on the selected values
     // const imagePath = `./static/videos/${dropdown.value}`;
-    const imagePath = `./static/videos/${dropdown.value}`;
+    const imagePath = `./static/images/${dropdown.value}`;
     displayedImage.src = imagePath;
   } else {
     // Reset the image source if dropdown2 is not selected
