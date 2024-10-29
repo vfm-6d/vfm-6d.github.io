@@ -150,7 +150,7 @@ function switchTab(evt, selectedTab) {
       console.log(tabs[i].classList);
   }
   // Add options to dropdown2 based on the selected tab
-  if (selectedTab === 'real') {
+  if (selectedTab === 'wild6d') {
     addOptionsToDropdown([
       // { value: 'real/env_0_combined.mp4', display: 'squeeze the mustard on the carrot' },
       { value: 'method.png', display: 'squeeze the mustard on the carrot' },
@@ -159,7 +159,7 @@ function switchTab(evt, selectedTab) {
       { value: 'real/env_3_combined.mp4', display: "put the spoon into the bowl" },
       { value: 'real/env_4_combined.mp4', display: "put the tomato into the bowl" },
     ], dropdown2);
-  } else if (selectedTab === 'spatial') {
+  } else if (selectedTab === 'co3d') {
     addOptionsToDropdown([
       { value: 'libero-spatial/env_0.mp4', display: 'pick up the black bowl between the plate and the ramekin and place it on the plate' },
       { value: 'libero-spatial/env_1.mp4', display: "pick up the black bowl from table center and place it on the plate" },
@@ -172,7 +172,7 @@ function switchTab(evt, selectedTab) {
       { value: 'libero-spatial/env_8.mp4', display: "pick up the black bowl on the stove and place it on the plate" },
       { value: 'libero-spatial/env_9.mp4', display: "pick up the black bowl on the wooden cabinet and place it on the plate" }
     ], dropdown2);
-  } else if (selectedTab === 'object') {
+  } else if (selectedTab === 'linemod') {
     addOptionsToDropdown([
       { value: 'libero-object/env_0.mp4', display: 'pick up the alphabet soup and place it in the basket' },
       { value: 'libero-object/env_1.mp4', display: 'pick up the bbq sauce and place it in the basket' },
