@@ -152,8 +152,7 @@ function switchTab(evt, selectedTab) {
   // Add options to dropdown2 based on the selected tab
   if (selectedTab === 'wild6d') {
     addOptionsToDropdown([
-      // { value: 'real/env_0_combined.mp4', display: 'squeeze the mustard on the carrot' },
-      { value: 'framework.png', display: "laptop" },
+      { value: 'wild6d-laptop.png', display: "laptop" },
       { value: 'teaser.png', display: "camera" },
       { value: 'real/env_2_combined.mp4', display: "mug" },
       { value: 'real/env_3_combined.mp4', display: "bottle" },
