@@ -154,7 +154,7 @@ function switchTab(evt, selectedTab) {
     addOptionsToDropdown([
       { value: 'wild6d-laptop.png', display: "laptop" },
       { value: 'wild6d-camera.png', display: "camera" },
-      { value: 'real/env_2_combined.mp4', display: "mug" },
+      { value: 'wild6d-mug.png', display: "mug" },
       { value: 'real/env_3_combined.mp4', display: "bottle" },
       { value: 'real/env_4_combined.mp4', display: "bowl" },
     ], dropdown2);
