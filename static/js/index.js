@@ -162,40 +162,18 @@ function switchTab(evt, selectedTab) {
     addOptionsToDropdown([
       { value: 'co3d-motorcycle.png', display: 'motorcycle' },
       { value: 'co3d-backpack.png', display: "backpack" },
-      { value: 'libero-spatial/env_2.mp4', display: "bicycle" },
-      { value: 'libero-spatial/env_3.mp4', display: "teddybear" },
-      { value: 'libero-spatial/env_4.mp4', display: "book" },
-      { value: 'libero-spatial/env_5.mp4', display: "car" },
       { value: 'co3d-chair.png', display: "chair" },
-      { value: 'libero-spatial/env_7.mp4', display: "handbag" },
-      { value: 'libero-spatial/env_8.mp4', display: "hydrant" },
-      { value: 'libero-spatial/env_9.mp4', display: "keyboard" },
-      { value: 'libero-spatial/env_9.mp4', display: "mouse" },
-      { value: 'libero-spatial/env_9.mp4', display: "toaster" },
-      { value: 'libero-spatial/env_9.mp4', display: "hairdryer" },
-      { value: 'libero-spatial/env_9.mp4', display: "laptop" },
-      { value: 'libero-spatial/env_9.mp4', display: "remote" },
-      { value: 'libero-spatial/env_9.mp4', display: "toilet" },
-      { value: 'libero-spatial/env_9.mp4', display: "toybus" },
-      { value: 'libero-spatial/env_9.mp4', display: "toyplane" },
-      { value: 'libero-spatial/env_9.mp4', display: "toytrain" },
-      { value: 'libero-spatial/env_9.mp4', display: "toytruck" }
+      { value: 'co3d-toyplane.png', display: "toyplane" },
+      { value: 'co3d-toytrain.png', display: "toytrain" }
     ], dropdown2);
   } else if (selectedTab === 'linemod') {
     addOptionsToDropdown([
-      { value: 'framework.png', display: 'ape' },
-      { value: 'teaser.png', display: 'bench.' },
-      { value: 'libero-object/env_2.mp4', display: 'camera' },
-      { value: 'libero-object/env_3.mp4', display: 'can' },
-      { value: 'libero-object/env_4.mp4', display: 'cat' },
-      { value: 'libero-object/env_5.mp4', display: 'driller' },
-      { value: 'libero-object/env_6.mp4', display: 'duck' },
-      { value: 'libero-object/env_7.mp4', display: 'eggbox' },
-      { value: 'libero-object/env_8.mp4', display: 'glue' },
-      { value: 'libero-object/env_9.mp4', display: 'holep.' },
-      { value: 'libero-object/env_9.mp4', display: 'iron' },
-      { value: 'libero-object/env_9.mp4', display: 'lamp' },
-      { value: 'libero-object/env_9.mp4', display: 'phone' }
+      { value: 'linemod-ape.png', display: 'ape' },
+      { value: 'linemod-bench.png', display: 'bench.' },
+      { value: 'linemod-can.png', display: 'can' },
+      { value: 'linemod-cat.png', display: 'cat' },
+      { value: 'linemod-driller.png', display: 'driller' },
+      { value: 'linemod-duck.png', display: 'duck' }
     ], dropdown2);
   } 
   // else if (selectedTab === 'goal') {
