@@ -143,18 +143,6 @@
         <img src="./static/images/framework.png" alt="teaser" class="teaser-image"><br>
       </div>
     </div>
-    <!-- <div class="columns is-centered has-text-justified">
-      <div class="column is-12">
-        <p>
-
-        </p>
-      </div>
-    </div> -->
-    <!-- <div class="columns is-centered has-text-left">
-      <div class="column">
-        <h2 class="title is-4">Experiments</h2>
-      </div>
-    </div> -->
     <div class="columns is-centered has-text-justified">
       <div class="column is-12">
         <p>
@@ -172,15 +160,17 @@
                   type="video/mp4">
       </div>
     </div> -->
-    <br>
+    <!-- <br> -->
     <div class="columns is-multiline">
       <div class="column is-12">
         <h2 class="title is-5">Object Pose Estimation Results Visualization</h2>
       </div>
       <div class="column is-12 has-text-left">
         <p>
-          Use the tabs and the dropdown menu to select the task suite in the benchmark the language instruction. The colored curves indicate the locations (in the camera frame) that the points should go to in future time steps.
-          For simulation tasks, the green border indicates successful task completion.
+          Use the tabs and the dropdown menu to select the object category / instance name in the corresponding benchmark. 
+          For category-level evaluation, we show the used shape template on the left side of the image. The first row shows the predicted object coordinate map, 
+          and the second row visualizes the predicted object pose.
+          For instance-level evaluation, we use the corresponding instance-level object CAD model during experiments.
         </p>
       </div>
     </div>
@@ -214,11 +204,6 @@
     </div>
     <div class="columns is-centered has-text-justified">
       <div class="column is-12">
-      <!-- <div class="column is-10 full"> -->
-        <!-- <video id="displayed-image" class="lib-video" autoplay muted loop playsinline>
-          <source src="./static/videos/env_0.mp4"
-                  type="video/mp4">
-        </video> -->
         <img id="displayed-image" src="" alt="Selected Image">
       </div>
     </div>
