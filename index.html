@@ -174,15 +174,6 @@
         </p>
       </div>
     </div>
-    <!-- <div class="tabs is-toggle is-fullwidth" id="policyTaskTabs">
-      <ul>
-        <li class="tablinks" id="clickDefault" onclick="switchTab(event, 'real')"><a><b>Real-Kitchen</b></a></li>
-        <li class="tablinks" onclick="switchTab(event, 'long')"><a><b>LIBERO-Long</b></a></li>
-        <li class="tablinks" onclick="switchTab(event, 'spatial')"><a><b>LIBERO-Spatial</b></a></li>
-        <li class="tablinks" onclick="switchTab(event, 'object')"><a><b>LIBERO-Object</b></a></li>
-        <li class="tablinks" onclick="switchTab(event, 'goal')"><a><b>LIBERO-Goal</b></a></li>
-      </ul>
-    </div> -->
     <div class="tabs is-toggle is-fullwidth" id="policyTaskTabs">
       <ul>
         <li class="tablinks" id="clickDefault" onclick="switchTab(event, 'wild6d')"><a><b>Wild6D</b></a></li>
@@ -210,201 +201,36 @@
     <br>
     <div class="columns is-centered is-multiline">
       <div class="column is-12">
-        <h2 class="title is-5">Tracks Enable Cross-embodiment Learning</h2>
+        <h2 class="title is-5">VFM-6D in Open-World Scenarios</h2>
       </div>
       <div class="column is-12 has-text-left">
         <p>
-          ATM's track transformer can leverage videos of different embodiments accomplishing the same task to capture the relevant motion. In the below examples, we train the track transformer on a large dataset of actionless videos from the first embodiment, and 10 demonstrations from the second embodiment. We then perform policy learning on 10 demonstrations. By incorporating the cross-embodiment videos, ATM generates higher fidelity tracks, and ATM's policy performance greatly increases.
+          In open-world scenarios, it is possible that the shape template corresponding
+          to the category of the observed object is not collected in advance. 
+          By integrating VFM-6D with GPT-4V and text-to-3D model, we demonstrate the robustness and generalization capability of VFM-6D in handling open-world scenarios involving novel object categories.
+          In our evaluation, we exploit the text-to-3D generation function provided by Meshy.
         </p>
       </div>
     </div>
     <div class="columns is-centered is-multiline">
       <div class="column is-12 low-marg">
         <p>
-          <strong>Fold the cloth and pull it to the right</strong>: tracks model changes in deformation.
+          <strong>Single-category static open-world scenes</strong>.
         </p>
       </div>
-      <div class="column is-5 low-marg">
-        <div class="full pt item-container">
-          <p><strong>Video Pre-training</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/cloth/cloth_human.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>100 human</strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/cloth/cloth_robot.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>10 UR5</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-5 low-marg">
-        <div class="full pl item-container">
-          <p><strong>ATM Policy Learning</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/cloth/cloth_atm.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>UR5 only: <span style="color:#900000">0%</span></strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/cloth/cloth_atm_h.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>Human+UR5: <span style="color:green">63%</span></strong></p>
-            </div>
-          </div>
+      <div class="columns is-centered has-text-justified">
+        <div class="column is-12">
+          <img src="./static/images/open-world1.png" alt="teaser" class="teaser-image"><br>
         </div>
       </div>
       <div class="column is-12 low-marg">
         <p>
-          <strong>Put the tomato into the pan and close the cabinet door</strong>: tracks effectively guide long-horizon behaviors.
+          <strong>Multi-category dynamic manipulation scenes</strong>.
         </p>
       </div>
-      <div class="column is-5 low-marg">
-        <div class="full pt item-container">
-          <p><strong>Video Pre-training</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/kitchen/kitchen_human.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>100 human</strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/kitchen/kitchen_robot.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>10 UR5</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-5 low-marg">
-        <div class="full pl item-container">
-          <p><strong>ATM Policy Learning</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/kitchen/kitchen_atm.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>UR5 only: <span style="color:#900000">0%</span></strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/kitchen/kitchen_atm_h.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>Human+UR5: <span style="color:green">63%</span></strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-12 low-marg">
-        <p>
-          <strong>Use the broom to sweep the toys into the dustpan and put it in front of the dustpan</strong>: tracks enable reasoning about tools.
-        </p>
-      </div>
-      <div class="column is-5 low-marg">
-        <div class="full pt item-container">
-          <p><strong>Video Pre-training</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/tool/tool_human.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>100 human</strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/tool/tool_robot.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>10 UR5</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-5 low-marg">
-        <div class="full pl item-container">
-          <p><strong>ATM Policy Learning</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/tool/tool_atm.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>UR5 only: <span style="color:#900000">13%</span></strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/tool/tool_atm_h.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>Human+UR5: <span style="color:green">60%</span></strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-12 low-marg">
-        <p>
-          <strong>Pick up the can and place in the bin</strong>: tracks transfer between robots.
-        </p>
-      </div>
-      <div class="column is-5 low-marg">
-        <div class="full pt item-container">
-          <p><strong>Video Pre-training</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/ur/franka_pred_crop_vert.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>160 Franka</strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/ur/ur_pred_crop_vert.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>10 UR5</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-5 low-marg">
-        <div class="full pl item-container">
-          <p><strong>ATM Policy Learning</strong></p>
-          <div class="item-container">
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/ur/atm_ur_crop_vert.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>UR5 only: <span style="color:#900000">47%</span></strong></p>
-            </div>
-            <div class="half">
-              <video class="x-vid" autoplay muted loop playsinline width="100%">
-                <source src="./static/videos/xemb/ur/atm_ft_crop_vert.mp4"
-                type="video/mp4">
-              </video>
-              <p><strong>Franka+UR5: <span style="color:green">80%</span></strong></p>
-            </div>
-          </div>
+      <div class="columns is-centered has-text-justified">
+        <div class="column is-12">
+          <img src="./static/images/open-world2.png" alt="teaser" class="teaser-image"><br>
         </div>
       </div>
     </div>
