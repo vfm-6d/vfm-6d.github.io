@@ -160,7 +160,7 @@ function switchTab(evt, selectedTab) {
     ], dropdown2);
   } else if (selectedTab === 'co3d') {
     addOptionsToDropdown([
-      { value: 'framework.png', display: 'motorcycle' },
+      { value: 'co3d-motorcycle.png', display: 'motorcycle' },
       { value: 'teaser.png', display: "backpack" },
       { value: 'libero-spatial/env_2.mp4', display: "bicycle" },
       { value: 'libero-spatial/env_3.mp4', display: "teddybear" },
