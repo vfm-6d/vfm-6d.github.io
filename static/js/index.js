@@ -161,7 +161,7 @@ function switchTab(evt, selectedTab) {
   } else if (selectedTab === 'co3d') {
     addOptionsToDropdown([
       { value: 'co3d-motorcycle.png', display: 'motorcycle' },
-      { value: 'teaser.png', display: "backpack" },
+      { value: 'co3d-backpack.png', display: "backpack" },
       { value: 'libero-spatial/env_2.mp4', display: "bicycle" },
       { value: 'libero-spatial/env_3.mp4', display: "teddybear" },
       { value: 'libero-spatial/env_4.mp4', display: "book" },
