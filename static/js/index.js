@@ -166,7 +166,7 @@ function switchTab(evt, selectedTab) {
       { value: 'libero-spatial/env_3.mp4', display: "teddybear" },
       { value: 'libero-spatial/env_4.mp4', display: "book" },
       { value: 'libero-spatial/env_5.mp4', display: "car" },
-      { value: 'libero-spatial/env_6.mp4', display: "chair" },
+      { value: 'co3d-chair.png', display: "chair" },
       { value: 'libero-spatial/env_7.mp4', display: "handbag" },
       { value: 'libero-spatial/env_8.mp4', display: "hydrant" },
       { value: 'libero-spatial/env_9.mp4', display: "keyboard" },
