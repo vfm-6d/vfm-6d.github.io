@@ -150,52 +150,32 @@
         </p>
       </div>
     </div>
-    <div class="columns is-centered has-text-left">
+    <!-- <div class="columns is-centered has-text-left">
       <div class="column">
-        <h2 class="title is-4">Results</h2>
-      </div>
-    </div>
-    <!-- <div class="columns is-centered has-text-justified">
-      <div class="column is-12">
-        <p>
-          We evaluate our method on a challenging simulation benchmark (LIBERO) comprising 130 language-conditioned manipulation tasks, and on 5 tasks in a real-world UR5 Kitchen environment. Our experiments demonstrate that trajectory-guided policies significantly surpass various strong baselines in video pre-training, achieving an average success rate of 63% compared to the highest success rate of 37% by previous methods, marking an improvement of over 80%. ATM's performance is also comparable to BC with 5x more training demonstrations (the BC-Full-Trainset indicated by the black dashed line).
-        </p>
-      </div>
-    </div> -->
-    <!-- <div class="columns is-centered has-text-justified">
-      <div class="column is-8">
-        <img src="./static/images/main_results.png" alt="teaser" class="teaser-image"><br>
+        <h2 class="title is-4">Experiments</h2>
       </div>
     </div> -->
     <div class="columns is-centered has-text-justified">
       <div class="column is-12">
         <p>
-          We evaluate our method on a challenging simulation benchmark (LIBERO) comprised of 130 language-conditioned manipulation tasks, and on 5 tasks in a real-world UR5 Kitchen environment. Our experiments demonstrate that trajectory-guided policies significantly surpass various strong baselines in video pre-training. With dense supervision from the predicted tracks, our trained policies are able to perform long-horizon tasks, and reason about objects, spatial locations, and language instructions.
-          <!-- in both a large scale simulated benchmark (LIBERO), and a real-world kitchen environment.  -->
-          We visualize policy rollouts on all 130 of the LIBERO tasks below:
+          We evaluate VFM-6D on Wild6D benchmark dataset comprised of 162 different object instances in 5 table-top categories, and on CO3D dataset comprised of 200 different object instances in 20 categories.
+          Moreover, we also evaluate VFM-6D on instance-level LINEMOD benchmark dataset, which consists of 13 untextured object instances.
+          Our experiments demonstrate the superior generalization capability of VFM-6D.          
         </p>
         <br>
       </div>
     </div>
-    <div class="columns is-centered has-text-justified">
+    <!-- <div class="columns is-centered has-text-justified">
       <div class="column is-10">
         <video autoplay muted loop playsinline>
           <source src="./static/videos/compressed_all_tasks_1080.mp4"
                   type="video/mp4">
       </div>
-    </div>
-    <br>
-    <!-- <div class="columns is-centered has-text-justified">
-      <div class="column is-12 low-marg">
-        <p>
-          <strong>Video:</strong> ATM policies performing 130 language-conditioned manipulation tasks in simulation. Performance is comparable to BC with 5x more training demonstrations.
-        </p>
-        <br>
-      </div>
     </div> -->
+    <br>
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title is-5">Policy Rollout Visualization</h2>
+        <h2 class="title is-5">Object Pose Estimation Results Visualization</h2>
       </div>
       <div class="column is-12 has-text-left">
         <p>
